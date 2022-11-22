@@ -16,6 +16,8 @@ body {
 }
 #container {
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -163,8 +165,33 @@ label[for="Clubs"] {
   }
   #page-content {
     grid-column: 1/-1;
+    text-align: center;
+  }
+  #page-content p span {
+    font-size: 1.15rem;
+    font-weight: 500;
   }
   #logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 380px) {
+  body {
+    font-size: 0.85rem;
+  }
+
+  #logo img {
     margin: 0 auto;
+    width: 80%;
+    margin-bottom: 0.5rem;
+  }
+  #page-content {
+    text-align: center;
+  }
+  #page-content p span {
+    font-size: 1rem;
+    font-weight: 500;
   }
 }
