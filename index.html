@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clubs Parascolaires à Solicode</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c1f4059a23.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-container">
+        <div class="header">
+          <h2>SOLICODE</h2>
+        </div>
+        <form
+          id="form"
+          class="form"
+          action="confirmation.html"
+          autocomplete="off"
+        >
+          <div class="form-div">
+            <label for="form-nom">Nom</label>
+            <input
+              type="text"
+              id="form-nom"
+              name="fname"
+              maxlength="30"
+              placeholder="Entre ton nom (Moumou)"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-div">
+            <label for="form-prènom">Prènom</label>
+            <input
+              type="text"
+              id="form-prènom"
+              name="lname"
+              placeholder="Entre ton prènom (Outhman)"
+              maxlength="30"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-div">
+            <label for="form-email">Email</label>
+            <input
+              type="text"
+              id="form-email"
+              name="email"
+              placeholder="example: test@test.com"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-div">
+            <label for="form-télephone">Télephone</label>
+            <input
+              type="text"
+              id="form-télephone"
+              name="phone"
+              placeholder="example: 0612345678"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-div">
+            <p>Genre</p>
+            <div class="genre-radios">
+              <input
+                type="radio"
+                value="Masculin"
+                id="form-genre-masculin"
+                name="genre"
+              />
+              <label for="form-genre-masculin">Masculin</label>
+              <input
+                type="radio"
+                value="Féminin"
+                id="form-genre-féminin"
+                name="genre"
+              />
+              <label for="form-genre-féminin">Féminin</label>
+            </div>
+            <small></small>
+          </div>
+          <div class="form-div">
+            <label for="form-groups">Groupe:</label>
+            <select id="form-groups">
+              <option value="">Choose one</option>
+              <option value="DW101">DW101</option>
+              <option value="DW102">DW102</option>
+              <option value="DW103">DW103</option>
+              <option value="DM101">DM101</option>
+              <option value="DM102">DM102</option>
+            </select>
+            <small></small>
+          </div>
+          <div class="form-div">
+            <label for="Clubs">Club(s):</label>
+            <div id="form-div-informatique">
+              <input type="checkbox" name="Informatique" id="Informatique" />
+              <label for="Informatique">Informatique</label>
+            </div>
+            <div id="form-div-Robotique">
+              <input type="checkbox" name="Robotique" id="Robotique" />
+              <label for="Robotique">Robotique</label>
+            </div>
+            <div id="form-div-Jeu_d'échecs">
+              <input type="checkbox" name="Jeu_d'échecs" id="Jeu_d'échecs" />
+              <label for="Jeu_d'échecs">Jeu d'échecs</label>
+            </div>
+            <div id="form-div-Musique">
+              <input type="checkbox" name="Musique" id="Musique" />
+              <label for="Musique">Musique</label>
+            </div>
+            <div id="form-div-Foot">
+              <input type="checkbox" name="Foot" id="Foot" />
+              <label for="Foot">Foot</label>
+            </div>
+            <div id="form-div-Théâtre">
+              <input type="checkbox" name="Théatre" id="Théatre" />
+              <label for="Théatre">Théatre</label>
+            </div>
+            <small></small>
+          </div>
+
+          <input type="submit" value="Submit" id="submit-btn" />
+        </form>
+      </div>
+      <div id="page-content">
+        <img
+          src="Sans_titre-removebg-preview.png"
+          alt="Solicode logo"
+          id="logo"
+        />
+        <p>
+          <span>Bienvenue</span>, vous êtes dans la page des clubs, et cela
+          signifie que vous souhaitez faire partie de nos clubs. C'est parfait!
+          Il ne vous reste qu'à renseigner vos informations dans le formulaire
+          ci-dessous, et choisissez entre un et trois clubs que vous aimerez
+          rejoindre.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
