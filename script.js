@@ -15,14 +15,14 @@ const groupeOptions = document.querySelectorAll("#form-groups option");
 const makeLower = function (ele) {
   return ele.value.toLowerCase();
 };
-const fNameRegex = /^(^[a-z{2-}]+[\'\-\s]?[a-z]+)$/gi;
-const lNameRegex = /^(^[a-z{2-}]+[\'\-\s]?[a-z]+)$/gi;
-const phoneRegex = /^(05|06|07)\d{8}$/g;
+const fNameRegex = /^[a-zA-Z]{2,}(?:['\-\s][a-zA-Z]+)*$/i;
+const lNameRegex = /^[a-zA-Z]{2,}(?:['\-\s][a-zA-Z]+)*$/i;
+const phoneRegex = /^(05|06|07)\d{8}$/;
 const emailRegex = new RegExp(
   /^((\w+)\.(\w+)\.(\w+)@(gmail|hotmail|yahoo|ofppt).(com|org|net|ma))$/,
   "gi"
 );
-// `^(${makeLower(fName)}\.${makeLower(lName)}\.solicode@(gmail|outlook|hotmail|yahoo)\.(com|ma|fr))$`
+
 const validate = (input, regex) => regex.test(input.value.toLowerCase());
 const countCheckbox = (checkboxs) => {
   let count = 0;
@@ -67,8 +67,7 @@ const checkPhone = (phone) => {
   if (phone.value.trim() === "") {
     printError(phone, "Phone cannot be blank");
   } else if (validate(phone, phoneRegex)) printSuccess(phone);
-  else
-    printError(phone, "Please enter a valid phone number");
+  else printError(phone, "Please enter a valid phone number");
 };
 const checkGroup = () => {
   let selectedGroup = document.querySelector("#form-groups").value;
@@ -129,6 +128,11 @@ email.addEventListener("blur", (e) => {
 phone.addEventListener("blur", (e) => {
   checkPhone(phone);
 });
+
+fName.addEventListener("input", () => checkName(fName));
+lName.addEventListener("input", () => checkLastName(lName));
+email.addEventListener("input", () => checkEmail(email));
+phone.addEventListener("input", () => checkPhone(phone));
 
 formBtn.addEventListener("click", (e) => {
   checkInputs();
