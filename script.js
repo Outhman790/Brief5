@@ -64,9 +64,10 @@ const checkEmail = (email) => {
     printError(email, "Please enter a valid email");
 };
 const checkPhone = (phone) => {
-  if (phone == "") printError(phone, "Phone cannot be blank");
-  else if (validate(phone, phoneRegex)) printSuccess(phone);
-  else if (!validate(phone, phoneRegex))
+  if (phone.value.trim() === "") {
+    printError(phone, "Phone cannot be blank");
+  } else if (validate(phone, phoneRegex)) printSuccess(phone);
+  else
     printError(phone, "Please enter a valid phone number");
 };
 const checkGroup = () => {
@@ -78,6 +79,7 @@ const checkInputs = () => {
   const fNameValue = fName.value.trim();
   const lNameValue = lName.value.trim();
   const emailValue = email.value.trim();
+  const phoneValue = phone.value.trim();
   if (fNameValue === "") {
     printError(fName, "Name cannot be blank");
   } else if (validate(fName, fNameRegex)) printSuccess(fName);
@@ -93,10 +95,9 @@ const checkInputs = () => {
   } else if (validate(email, emailRegex)) printSuccess(email);
   else if (!validate(email, emailRegex))
     printError(email, "Please enter a valid email");
-  if (phone == "") printError(phone, "Phone cannot be blank");
+  if (phoneValue === "") printError(phone, "Phone cannot be blank");
   else if (validate(phone, phoneRegex)) printSuccess(phone);
-  else if (!validate(phone, phoneRegex))
-    printError(phone, "Please enter a valid phone number");
+  else printError(phone, "Please enter a valid phone number");
   if (masculinRadioBtn.checked || fémininRadioBtn.checked)
     printSuccess(fémininRadioBtn);
   else printError(fémininRadioBtn, "Please choose one at least");
