@@ -73,6 +73,11 @@ This project helps reinforce:
 * Implementing subtle animations and color-coded cues
 * Simulating a confirmation experience upon successful form submission
 
+### 🖥️ Screenshot
+
+![image](https://github.com/user-attachments/assets/caac16ca-fe79-4fa2-85a2-ee4628124378)
+![image](https://github.com/user-attachments/assets/64973a52-372d-44d6-b4c7-d461776accae)
+
 ---
 
 🌟 A beginner-friendly form project with practical validation use cases!
